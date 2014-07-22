@@ -520,7 +520,7 @@ class GatewayConnection(APNsConnection):
             elapsed += interval
 
     def send_notification_multiple(self, frame):
-        return self.write(frame.get_frame())
+        return self.write(frame.frame_data)
     
     def register_response_listener(self, response_listener):
         self._response_listener = response_listener
